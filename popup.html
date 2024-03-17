@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SummaReader Settings</title>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <img src="icon.png" alt="SummaReader" style="width: 50px; height: 50px;">
+  <h1>SummaReader</h1>
+  <label for="modelSelect">Select a Model:</label>
+  <select id="modelSelect">
+    <option value="" selected disabled>Select a Model</option>
+    <option value="mistralai/Mistral-7B-Instruct-v0.2">Mistral 7B</option>
+    <option value="HuggingFaceH4/zephyr-7b-beta">Zephyr 7B</option>
+    <option value="mistralai/Mixtral-8x7B-Instruct-v0.1">Mixtral 8x7B</option>
+    <option value="meta-llama/Llama-2-70b-chat-hf">Llama 2 70B Chat</option>
+  </select>
+  <label for="voiceSelect">Select a Voice:</label>
+  <select id="voiceSelect"></select>
+  <p id="notice">Unfortunately, SummaReader is not available on this page yet. Navigate to Reddit to try it out!</p>
+</body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+font-family: "Instrument Sans", sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+h1 {
+  color: #000000;
+  font-weight: 800;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ff6122;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+option[disabled] {
+  color: #999;
+}
+
+select option {
+    background-color: #d93a00;
+    color: white;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+p {
+    display: none;
+}
+
+</style>
